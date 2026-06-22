@@ -119,11 +119,11 @@ function App() {
               </div>
             </motion.div>
 
-            <motion.div variants={fadeUp} className="relative h-[500px]">
-              <img src="/Somos.png" alt="Foto del Equipo NEXA" className="w-full h-full" />
+            <motion.div variants={fadeUp} className="relative h-[350px] md:h-[500px]">
+              <img src="/Somos.png" alt="Foto del Equipo NEXA" className="w-full h-full object-cover object-top md:object-center rounded-xl md:rounded-none" />
               {/* <PlaceholderImage text="Foto del Equipo NEXA" className="w-full h-full" /> */}
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 border-b-4 border-l-4 border-white drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]"></div>
-              <div className="absolute -top-6 -right-6 w-32 h-32 border-t-4 border-r-4 border-white drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]"></div>
+              <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 w-20 h-20 md:w-32 md:h-32 border-b-4 border-l-4 border-white drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]"></div>
+              <div className="absolute -top-4 -right-4 md:-top-6 md:-right-6 w-20 h-20 md:w-32 md:h-32 border-t-4 border-r-4 border-white drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]"></div>
             </motion.div>
           </motion.div>
         </div>
@@ -174,7 +174,7 @@ function App() {
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-16">EMPRESAS QUE AVALAN<br />NUESTRO TRABAJO</h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
             {[
               "Chita.png",
               "Club blanco .PNG",
@@ -189,11 +189,11 @@ function App() {
               "Toloma.png",
               "WOW.PNG"
             ].map((logo, i) => (
-              <div key={i} className="aspect-[3/2] flex items-center justify-center glass-panel rounded-lg hover:bg-white/5 hover:scale-105 transition-all duration-300 p-6 group">
+              <div key={i} className="aspect-[3/2] flex items-center justify-center glass-panel rounded-xl hover:bg-white/10 hover:-translate-y-1 hover:scale-[1.03] transition-all duration-300 p-2 md:p-4 group shadow-lg hover:shadow-primary/20 bg-surface/30">
                 <img
                   src={`/Logos/${encodeURIComponent(logo)}`}
                   alt={`Logo Cliente ${i + 1}`}
-                  className="max-w-full max-h-full object-contain group-hover:grayscale-0 transition-all duration-500 opacity-60 group-hover:opacity-100"
+                  className="w-[95%] h-[95%] object-contain transition-all duration-500 opacity-90 group-hover:opacity-100 drop-shadow-[0_0_8px_rgba(255,255,255,0.15)] group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] group-hover:scale-105"
                 />
               </div>
             ))}
@@ -246,7 +246,7 @@ function App() {
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer} className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <motion.div variants={fadeUp} className="lg:col-span-1 flex flex-col justify-center">
                 <h3 className="text-sm text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] uppercase tracking-widest font-bold mb-2">CLIENTE</h3>
-                <h4 className="text-3xl font-bold mb-2">SILUETTE</h4>
+                <h4 className="text-3xl font-bold mb-2" translate="no">SILUETTE</h4>
                 <p className="text-text-muted mb-8">Club de mujeres</p>
                 <div className="w-16 h-1 bg-white/70 shadow-[0_0_10px_rgba(255,255,255,0.6)]"></div>
               </motion.div>
